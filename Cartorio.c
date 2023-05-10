@@ -11,6 +11,7 @@ int registro()//Função responsável por cadastrar os usuários no sistema.
     char sobrenome[40];
     char cargo[40];//Fim Criação Variavel/string.
     
+    
     printf("Digitar CPF a ser Cadastrado:");//Coletar Informação do Usuário.
     scanf("%s", cpf);//%s Refere-se a string,o cpf que sera salvo na string.
 
@@ -126,7 +127,8 @@ int main()//Função Principal.
 	   printf("Escolha a opção desejada no menu:\n\n");
 	   printf("\t1 - Registrar nomes\n");
 	   printf("\t2 - Consultar nomes\n");
-	   printf("\t3 - Deletar nomes\n\n");
+	   printf("\t3 - Deletar nomes\n");
+	   printf("\t4 - Sair do Sistema\n");
 	   printf("Opção:");//Fim do Menu Principal.
 	
        scanf("%d", &opcao);//Armazenando a Escolha do Usuário.
@@ -145,7 +147,13 @@ int main()//Função Principal.
 		  
 		  case 3://Variável 3.
 		  deletar();//Chamada do Case 3.
-		  break;	
+		  break;
+		  
+		  case 4://Variavel 4.
+		  printf("Obrigado por Utilizar nosso Software!\n");
+		  return 0;
+		  break;
+		  	
 		  
 		  default://Caso não haja variável disponível.
 		  printf("Essa Opção Não Está Disponivel\n");
